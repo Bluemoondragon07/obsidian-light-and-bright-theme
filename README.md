@@ -1,0 +1,1 @@
+# obsidian-light---bright-theme
