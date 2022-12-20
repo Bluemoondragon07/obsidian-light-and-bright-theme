@@ -14,6 +14,7 @@ A clean, weightless theme created to evoke an elegant, modern, cozy feel. This t
 - Various elements have been rounded for a cleaner, more cozy feel.
 - Box shadows give depth to certain elements.
 - Header sizes increase more by level, making each one easily distinguishable.
+- Centered headers.
 
 # 🔌Compatible Plug-Ins
 - [x] Dataview
