@@ -1,6 +1,6 @@
 ![](assets/light-and-dark.png)
 
-A clean, light theme created to evoke an elegant, modern, cozy feel. This theme was heavily inspired by hydescarf's Mado Miniflow Theme and the Ultra Lobster Theme by kneecaps.
+A clean, weightless theme created to evoke an elegant, cozy feel. This theme was heavily inspired by hydescarf's Mado Miniflow Theme and the Ultra Lobster Theme by kneecaps.
 # Features
 ## 🎨 Color
 - Respects your color choices.
@@ -8,7 +8,7 @@ A clean, light theme created to evoke an elegant, modern, cozy feel. This theme 
 - Stays Consistent
   - Values stay the same, regardless of whether you choose a dull or intense accent color. No interference with contrast.
 - Easy on the eyes in both *light* and **dark** mode.
-## 🔅 UI
+## 🎩 Style
 - Various elements have been rounded for a cleaner, more cozy feel.
 - Box shadows give depth to certain elements.
 
@@ -20,7 +20,7 @@ A clean, light theme created to evoke an elegant, modern, cozy feel. This theme 
 
 # Credits
 - ⭐ hydescarf's Mado Miniflow theme
-  - used a bit of code to round the main note pane
+  - used code to round the main note pane
   - inspiration
 - ⭐ kepano's Minimal theme
   - cards CSS class
