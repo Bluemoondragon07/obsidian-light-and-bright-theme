@@ -1,4 +1,4 @@
-![](assets/light-and-bright-cover.png)
+![](assets/light-and-dark.png)
 
 A clean, light theme created to evoke an elegant, modern, cozy feel. This theme was heavily inspired by hydescarf's Mado Miniflow Theme and the Ultra Lobster Theme by kneecaps.
 # Features
