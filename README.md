@@ -1,7 +1,10 @@
-![](assets/light-and-dark.png)
+![](assets/main-image.png)
 
 A clean, weightless theme created to evoke an elegant, modern, cozy feel. This theme was heavily inspired by hydescarf's Mado Miniflow Theme and the Ultra Lobster Theme by kneecaps.
+
 # Features
+
+![](assets/light-and-dark.png)
 
 ## 🎨 Color
 - Respects your color choices.
@@ -15,6 +18,7 @@ A clean, weightless theme created to evoke an elegant, modern, cozy feel. This t
 - Box shadows give depth to certain elements.
 - Header sizes increase more by level, making each one easily distinguishable.
 - Centered headers.
+
 
 # 🔌Compatible Plug-Ins
 - [x] Dataview
@@ -30,3 +34,4 @@ A clean, weightless theme created to evoke an elegant, modern, cozy feel. This t
   - cards CSS class
 - ⭐ kneecaps' Ultra Lobster Theme
   - inspiration
+
