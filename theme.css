@@ -878,5 +878,6 @@ body{
 }
 .markdown-embed-title {
   text-align: center;
-  font-size: var(--h1-size);
+  font-size: var(--h2-size);
+  overflow:hidden;
 }
