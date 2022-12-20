@@ -1,4 +1,6 @@
-A clean, light theme created to evoke an elegant, modern, cozy feel.
+![](assets/light-and-bright-cover.png)
+
+A clean, light theme created to evoke an elegant, modern, cozy feel. This theme was heavily inspired by hydescarf's Mado Miniflow Theme and the Ultra Lobster Theme by kneecaps.
 # Features
 ## 🎨 Color
 - Respects your color choices.
@@ -13,3 +15,14 @@ A clean, light theme created to evoke an elegant, modern, cozy feel.
 # 🔌Compatible Plug-Ins
 - [x] Dataview
 - [ ] Style Settings *(coming soon!)*
+# ✂️ Compatible Snippets
+- [x] Built-In support for Kepano's Minimal **cards** CSS class.
+
+# Credits
+- ⭐ hydescarf's Mado Miniflow theme
+  - used a bit of code to round the main note pane
+  - inspiration
+- ⭐ kepano's Minimal theme
+  - cards CSS class
+- ⭐ kneecaps' Ultra Lobster Theme
+  - inspiration
