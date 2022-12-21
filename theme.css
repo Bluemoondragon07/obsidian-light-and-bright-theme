@@ -881,3 +881,32 @@ body{
   font-size: var(--h2-size);
   overflow:hidden;
 }
+
+
+/* Frontmatter Styling */
+
+.frontmatter-container .frontmatter-container-header {
+  padding-bottom: 0.1em;
+}
+.frontmatter-container {
+  padding: 0 0 0em;
+  position: relative;
+  border-radius: 14px;
+  padding-right: 0;
+  margin-bottom: 5em;
+}
+.frontmatter-container .frontmatter-section-label {
+  flex-basis: 10em;
+  font-variant:small-caps;
+  font-weight: bold;
+  flex-shrink: 0;
+  font-size: var(--font-smaller);
+  text-transform: capitalize;
+}
+.frontmatter-container .frontmatter-section-data {
+  display: inline-flex;
+  padding-left: 1em;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-right: 0;
+}
