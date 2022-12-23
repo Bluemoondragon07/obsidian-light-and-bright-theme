@@ -11,6 +11,12 @@ try it anyway. You definitely CAN do it. I'm a 15-year-old who does not know CSS
 It took a lot of inference, Google, and examining other themes, but I did it. It's a very mediocre theme, but I did it. And you can do it, too.
 So, don't give up. Make that theme. Because YOU CAN DO IT. */
 
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+  --font-default: 'Roboto', sans-serif;
+}
 
 /* ----| CARDS SNIPPET |----*/
 
@@ -304,7 +310,7 @@ body{
   --table-border-color: var(--background-modifier-border);
   --table-white-space: normal;
   --table-header-background: var(--color-accent-1);
-  --table-header-background-hover: var(--color-accent-1);
+  --table-header-background-hover: var(--color-accent-2);
   --table-header-border-width: var(--table-border-width);
   --table-header-border-color: var(--table-border-color);
   --table-header-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -341,14 +347,10 @@ body{
 
   --tab-background-active: transparent;
 
- 
   --h2-line-height: 1.6em;
-  --h3-line-height: 2em;
-  --h4-line-height: 2em;
-  --h5-line-height: 2em;
-  --h6-line-height: 2em;
+  
 
-  --h1-size: 2.8em;
+  --h1-size: 2.3em;
   --h2-size: 2em;
 
 
@@ -406,7 +408,6 @@ h3, .markdown-rendered h3, .HyperMD-header-3, .HyperMD-list-line .cm-header-3 {
   font-weight:bold;
   font-variant:normal;
   font-family: var(--h3-font);
-  text-align: center;
 }
 h4, .markdown-rendered h4, .HyperMD-header-4, .HyperMD-list-line .cm-header-4 {
   font-variant: var(--h4-variant);
@@ -417,7 +418,6 @@ h4, .markdown-rendered h4, .HyperMD-header-4, .HyperMD-list-line .cm-header-4 {
   font-weight: bold;
   font-style: var(--h4-style);
   font-family: var(--h4-font);
-  text-align: center;
 }
 h5, .markdown-rendered h5, .HyperMD-header-5, .HyperMD-list-line .cm-header-5 {
   font-variant: var(--h5-variant);
@@ -428,7 +428,6 @@ h5, .markdown-rendered h5, .HyperMD-header-5, .HyperMD-list-line .cm-header-5 {
   font-weight:bold;
   font-style: var(--h5-style);
   font-family: var(--h5-font);
-  text-align: center;
 }
 h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
   font-variant: var(--h6-variant);
@@ -439,12 +438,11 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
   font-weight: bold;
   font-style: var(--h6-style);
   font-family: var(--h6-font);
-  text-align: center;
 }
 .inline-title {
   font-weight:bold;
   text-align:center;
-  font-size: 60px;
+  font-size: 45px;
   line-height: var(--inline-title-line-height);
   font-style: var(--inline-title-style);
   font-variant: var(--inline-title-variant);
@@ -686,7 +684,6 @@ body, body.is-translucent{
 	background-color:var(--background-secondary);
 }
 
-
 /* remove backgrounds for wave design background */
 .workspace,
 .workspace-tabs .workspace-leaf,
@@ -698,13 +695,11 @@ body, body.is-translucent{
   padding-bottom: 10px;
 }
 
-
-
-
 /* Make spacing to match collapsed left-ribbon-dock */
 body:not(.is-mobile) .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical.mod-root{
 	padding-right:var(--ribbon-width);
 }
+
 /* Make spacing for left side to match the right spacing during pop-out window mode */
 body:not(.is-mobile).is-popout-window .workspace-split.mod-vertical.mod-root{
 	padding-left:var(--ribbon-width);
@@ -745,11 +740,6 @@ body.toggle-sidebar-left-top .workspace-split.mod-horizontal.mod-left-split .wor
 .workspace-split.mod-horizontal.mod-right-split{
 	padding-left:23px;
 }
-
-
-
-
-
 
 
 .workspace-tab-header-container{
@@ -797,8 +787,6 @@ body.is-translucent .workspace-split.mod-vertical.mod-root .workspace-tabs:not(.
 	margin-top:-13px;
 }
 
-
-
 /* FIX BUTTON OPACITY */
 .workspace-ribbon.mod-left:before {
   position: absolute;
@@ -834,7 +822,10 @@ body:not(.is-mobile):is(:not(.css-settings-manager),.toggle-scrollbar-overlay) .
 	overflow-y:overlay;
 }
 
-/*-------------- END OF MADO MINIFLOW CODE ----------*/
+
+/* ------------------ End of Mado Minidlow Code ----------------------*/
+
+
 
 /* TAGS */
 a.tag, .editor .cl-hashtag {
@@ -882,17 +873,13 @@ body{
   overflow:hidden;
 }
 
-
 /* Frontmatter Styling */
-.frontmatter-container .frontmatter-container-header {
-  padding-bottom: 0.1em;
-}
+
 .frontmatter-container {
   padding: 0 0 0em;
   position: relative;
   border-radius: 14px;
   padding-right: 0;
-  margin-bottom: 5em;
 }
 .frontmatter-container .frontmatter-section-label {
   flex-basis: 10em;
@@ -909,3 +896,4 @@ body{
   align-items: center;
   padding-right: 0;
 }
+
