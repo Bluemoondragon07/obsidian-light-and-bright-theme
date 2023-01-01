@@ -18,9 +18,7 @@ A clean, weightless theme created to evoke an elegant, modern, cozy feel. This t
 - Box shadows give depth to certain elements.
 - Header sizes increase more by level, making each one easily distinguishable.
 - Headers 1 & 2 are centered
-  ### Recommended Fonts
-  - Roboto (used by theme by default)
-  - Aevnir Next
+ 
  
 # 🔌Compatible Plug-Ins
 - [x] Dataview
