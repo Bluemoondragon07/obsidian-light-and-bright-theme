@@ -659,6 +659,23 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
   --h4-color: var(--h1-color);
   --h5-color: var(--h1-color);
   --h6-color: var(--h1-color);
+
+  --color-red-rgb: 233, 49, 71;
+  --color-red: #E93147;
+  --color-green-rgb: 8, 185, 78;
+  --color-green: #08B94E;
+  --color-orange-rgb: 236, 117, 0;
+  --color-orange: #ec7500;
+  --color-yellow-rgb: 224, 172, 0;
+  --color-yellow: #e0ac00;
+  --color-cyan-rgb: 0, 191, 188;
+  --color-cyan: #00bfbc;
+  --color-blue-rgb: 8, 109, 221;
+  --color-blue: #086DDD;
+  --color-purple-rgb: 120, 82, 238;
+  --color-purple: #7852EE;
+  --color-pink-rgb: 213, 57, 132;
+  --color-pink: #D53984;
 }
 
 .theme-dark,
@@ -668,7 +685,7 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
   --background-secondary: hsl(calc(0 + var(--accent-h)), 10%, 20%);
   --background-tertiary: hsl(calc(0 + var(--accent-h)), 100%, 80%, 0.08);
   --text-muted: hsl(var(--accent-h), 50%, 73%);
-  --text-faint: hsl(var(--accent-h), 20%, 30%);
+  --text-faint: hsl(var(--accent-h), 20%, 55%);
   --color-base-100: hsl(calc(0 + var(--accent-h)), 20%, 80%);
 
 }
