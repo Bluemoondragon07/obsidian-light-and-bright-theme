@@ -11,14 +11,9 @@ try it anyway. You definitely CAN do it. I'm a 15-year-old who does not know CSS
 It took a lot of inference, Google, and examining other themes, but I did it. It's a very mediocre theme, but I did it. And you can do it, too.
 So, don't give up. Make that theme. Because YOU CAN DO IT. */
 
-/* IMPORT FONT */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-body{
-  --font-default: 'Roboto', sans-serif;
-}
 
 /* ----| CARDS SNIPPET |----*/
+/* By: kepano */
 
 :root {
   --cards-min-width:180px;
@@ -491,17 +486,18 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
   margin-bottom: 20pt;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;  /* experiment with values */
+  width: 70%;  
   transition:transform 0.25s ease;
 }
 
 .markdown-preview-view img:hover {
-    -webkit-transform:scale(0.5); /* experiment with values */
+    -webkit-transform:scale(0.5); 
     transform:scale(1.08);
     z-index: 100;
     
 }
 /* CALLOUTS */
+
 .callout {
   overflow: hidden;
   border-style: solid;
@@ -520,7 +516,7 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
 }
 
 
-.callout ::before{
+.callout::before{
   content: '';
   position: absolute;
   left: 15px;
@@ -535,7 +531,7 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
 /* BLOCKQUOTES */
 .markdown-preview-view blockquote{
 	margin:13px 0px;
-	padding:17px 27px 17px 37px;
+	padding:17px 50px 17px 37px;
 	border-radius:1em;
 	background-color:var(--background-tertiary);
 	border: transparent;
@@ -547,7 +543,7 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
 .markdown-preview-view blockquote:before{
   content: '';
   position: absolute;
-  left: 15px;
+  left: 14px;
   top: 15px;
   width: 3px;
   height: calc(100% - 30px);
@@ -580,13 +576,14 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
 
 }
 .dataview.inline-field-standalone-value {
-  padding-left: 1px;
-  padding-right: 8px;
+  padding-left: 0px !important;
+    padding-right: 0px !important;
   font-family: inherit;
   font-style:italic;
   font-weight: normal;
   background-color: transparent;
   color: var(--text-normal);
+  
 }
 .dataview.inline-field-value {
   padding-left: 8px;
@@ -650,9 +647,9 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
 .theme-light,
 .is-mobile.theme-light,
 .is-tablet.theme-light{
-  --background-primary: hsl(calc(0 + var(--accent-h)), 100%, 99%);
+  --background-primary: hsl(calc(0 + var(--accent-h)), 100%, 99.5%);
   --background-secondary: hsl(calc(0 + var(--accent-h)), 30%, 95%);
-  --background-tertiary: hsl(1,100%,100%, 0.6);
+  --background-tertiary: hsl(1,100%,100%);
   --text-muted: hsl(var(--accent-h), 20%, 50%);
   --text-faint: hsl(var(--accent-h), 20%, 63%, 65%);
   --color-base-100: hsl(calc(0 + var(--accent-h)), 20%, 35%);
@@ -667,8 +664,8 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
 .theme-dark,
 .is-mobile.theme-dark,
 .is-tablet.theme-dark{
-  --background-primary: hsl(calc(0 + var(--accent-h)), 20%, 12%);
-  --background-secondary: hsl(calc(0 + var(--accent-h)), 30%, 8%);
+  --background-primary: hsl(calc(0 + var(--accent-h)), 11%, 25.5%);
+  --background-secondary: hsl(calc(0 + var(--accent-h)), 10%, 20%);
   --background-tertiary: hsl(calc(0 + var(--accent-h)), 100%, 80%, 0.08);
   --text-muted: hsl(var(--accent-h), 50%, 73%);
   --text-faint: hsl(var(--accent-h), 20%, 30%);
@@ -787,7 +784,7 @@ body.is-translucent .workspace-split.mod-vertical.mod-root .workspace-tabs:not(.
 	margin-top:-13px;
 }
 
-/* FIX BUTTON OPACITY */
+/* FIX BUTTON OPACITY ( I added this in myself) */
 .workspace-ribbon.mod-left:before {
   position: absolute;
   left: 0;
@@ -821,7 +818,6 @@ body:not(.is-mobile):is(:not(.css-settings-manager),.toggle-scrollbar-overlay) .
 body:not(.is-mobile):is(:not(.css-settings-manager),.toggle-scrollbar-overlay) .CodeMirror-vscrollbar{
 	overflow-y:overlay;
 }
-
 
 /* ------------------ End of Mado Minidlow Code ----------------------*/
 
