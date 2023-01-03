@@ -685,7 +685,7 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
   --background-secondary: hsl(calc(0 + var(--accent-h)), 10%, 20%);
   --background-tertiary: hsl(calc(0 + var(--accent-h)), 100%, 80%, 0.08);
   --text-muted: hsl(var(--accent-h), 50%, 73%);
-  --text-faint: hsl(var(--accent-h), 20%, 30%);
+  --text-faint: hsl(var(--accent-h), 20%, 55%);
   --color-base-100: hsl(calc(0 + var(--accent-h)), 20%, 80%);
 
 }
