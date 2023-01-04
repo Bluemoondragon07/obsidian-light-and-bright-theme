@@ -394,6 +394,8 @@ h2, .markdown-rendered h2, .HyperMD-header-2, .HyperMD-list-line .cm-header-2 {
   text-align: center;
   font-family: var(--h2-font);
   border-bottom: 1.8px solid var(--text-faint);
+  margin-bottom: 0.6em;
+  overflow: hidden;
 }
 h3, .markdown-rendered h3, .HyperMD-header-3, .HyperMD-list-line .cm-header-3 {
   letter-spacing: -0.015em;
