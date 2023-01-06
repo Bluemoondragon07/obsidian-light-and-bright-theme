@@ -11,6 +11,11 @@ try it anyway. You definitely CAN do it. I'm a 15-year-old who does not know CSS
 It took a lot of inference, Google, and examining other themes, but I did it. It's a very mediocre theme, but I did it. And you can do it, too.
 So, don't give up. Make that theme. Because YOU CAN DO IT. */
 
+/* --- Import Font --- */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+body{
+  --font-text-theme: 'Noto Sans', sans-serif;
+}
 
 /* ----| CARDS SNIPPET |----*/
 /* By: kepano */
