@@ -1,6 +1,6 @@
 ![](assets/main-image.png)
 
-A clean, weightless theme created to evoke an elegant, modern, cozy feel. This theme was heavily inspired by hydescarf's Mado Miniflow Theme and the Ultra Lobster Theme by kneecaps.
+A clean, weightless theme created to evoke an elegant, modern, cozy feel. This theme was heavily inspired by hydescarf's Mado Miniflow Theme and the Ultra Lobster Theme by kneecaps. This is also my first theme.
 
 # Features
 
@@ -18,6 +18,10 @@ A clean, weightless theme created to evoke an elegant, modern, cozy feel. This t
 - Box shadows give depth to certain elements.
 - Header sizes increase more by level, making each one easily distinguishable.
 - Headers 1 & 2 are centered
+### 🔤 Recommended Fonts
+- Yu Gothic
+- Malgun Gothic
+- Sitka Small
  
  
 # 🔌Compatible Plug-Ins
