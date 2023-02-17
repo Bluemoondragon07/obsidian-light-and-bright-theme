@@ -12,9 +12,15 @@ It took a lot of inference, Google, and examining other themes, but I did it. It
 So, don't give up. Make that theme. Because YOU CAN DO IT. */
 
 /* --- Import Font --- */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+.workspace {
+  font-weight: var(--font-normal) !important;
+}
+
 body{
-  --font-text-theme: 'Noto Sans', sans-serif;
+  --font-default: 'Roboto', 'Assistant', sans-serif;
 }
 /* ----| CARDS SNIPPET |----*/
 /* By: kepano */
@@ -43,6 +49,9 @@ body{
   padding-top: 8px; 
 }
 
+.cards table:hover {
+  transform: none;
+}
 .cards table.dataview tbody {
   clear: both;
   padding: 0.5rem 0;
@@ -59,16 +68,16 @@ body{
   flex-direction: column;
   margin: 5px;
   padding: 0 0 calc(var(--cards-padding)/3) 0;
-  border-radius: 25px;
+  border-radius: 13px;
   overflow: hidden;
-  transition: box-shadow 0.15s linear;
+  transition: box-shadow 0.15s linear, transform 0.15s;
   box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.05), 0 1px 3px 1px rgba(0, 0, 0, 0.025);
  }
 
 .cards table.dataview > tbody > tr:hover {
   border: var(--cards-border-width) solid transparent;
   box-shadow: 4px 4px 10px 5px rgba(0, 0, 0, 0.05), 0 1px 3px 1px rgba(0, 0, 0, 0.025);
-  transition: box-shadow 0.15s linear;
+  transform: scale(1.03);
  }
 
 /* Styling elements inside cards */
@@ -297,9 +306,20 @@ body{
 
 /* ----| TEXT STYLING |-----*/
 
+.markdown-source-view {
+  --table-header-color: var(--text-normal);
+}
+
+li:hover {
+--list-marker-color: var(--color-accent-2);
+--list-bullet-size: 0.55em;
+}
 
 body{
   --bold-weight: var(--font-bold);
+  --font-bold: 600;
+  --font-normal: 300;
+  --font-light: 100;
   --link-decoration: none;
   --checkbox-radius: 100px;
   --checklist-done-decoration: none;
@@ -312,10 +332,9 @@ body{
   --table-header-background-hover: var(--color-accent-2);
   --table-header-border-width: var(--table-border-width);
   --table-header-border-color: var(--table-border-color);
-  --table-header-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   --table-header-size: inherit;
-  --table-header-weight: light;
-  --table-header-color: white;
+  --table-header-weight: var(--font-bold);
+  --table-header-color: var(--text-on-accent);
   --table-text-size: inherit;
   --table-text-color: inherit;
   --table-column-max-width: 100%;
@@ -329,9 +348,7 @@ body{
   --vault-name-font-size: var(--font-ui-large);
   --vault-name-font-weight: var(--font-bold);
   --vault-name-color: var(--text-muted);
-  --code-background: hsl(var(--accent-h), 100%, 80%, 0.15);
-  
-  --background-modifier-border: transparent;
+  --divider-width: 0px;
 
   --callout-border-opacity: 25%;
   --callout-border-width: 0px;
@@ -349,9 +366,16 @@ body{
   --h2-line-height: 1.6em;
   
 
-  --h1-size: 2.3em;
+  --h1-size: 2.17em;
+  --h1-weight: 600;
+  --h1-font: 'Lato';
   --h2-size: 2em;
-
+  --h2-weight: 400;
+  --h2-font: 'Work Sans';
+  --h3-weight: 400;
+  --h4-weight: 400;
+  --h5-weight: 400;
+  --h6-weight: 400;
 
 
   
@@ -364,7 +388,6 @@ body{
 
 .markdown-preview-view {
   font-size: var(--font-text-size);
-  font-weight: lighter;
   line-height: var(--line-height-normal);
   width: 100%;
   height: 100%;
@@ -377,7 +400,6 @@ body{
   -webkit-user-select: text;
 }
 .markdown-source-view {
-  font-weight: lighter;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 h1, .markdown-rendered h1, .HyperMD-header-1, .HyperMD-list-line .cm-header-1 {
@@ -388,25 +410,41 @@ h1, .markdown-rendered h1, .HyperMD-header-1, .HyperMD-list-line .cm-header-1 {
   font-style: var(--h1-style);
   font-family: var(--h1-font);
   text-align: center;
+  margin-top: 1em;
+  transition: transform 0.25s;
+}
+.markdown-rendered h1:hover,
+.markdown-rendered h2:hover,
+.markdown-rendered h3:hover,
+.markdown-rendered h4:hover,
+.markdown-rendered h5:hover,
+.markdown-rendered h6:hover {
+  transform: scale(1.05);
+}
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6 {
+  transition: transform 0.25s;
 }
 h2, .markdown-rendered h2, .HyperMD-header-2, .HyperMD-list-line .cm-header-2 {
   letter-spacing: -0.015em;
   line-height: var(--h2-line-height);
   font-size: var(--h2-size);
   color: var(--h2-color);
-  font-weight:bold;
   text-align: center;
   font-family: var(--h2-font);
-  border-bottom: 1.8px solid var(--text-faint);
+  border-bottom: 1px solid var(--hr-color);
   margin-bottom: 0.6em;
   overflow: hidden;
 }
+
 h3, .markdown-rendered h3, .HyperMD-header-3, .HyperMD-list-line .cm-header-3 {
   letter-spacing: -0.015em;
   line-height: var(--h3-line-height);
   font-size: var(--h3-size);
   color: var(--h3-color);
-  font-weight:bold;
   font-variant:normal;
   font-family: var(--h3-font);
 }
@@ -416,7 +454,7 @@ h4, .markdown-rendered h4, .HyperMD-header-4, .HyperMD-list-line .cm-header-4 {
   line-height: var(--h4-line-height);
   font-size: var(--h4-size);
   color: var(--h4-color);
-  font-weight: bold;
+
   font-style: var(--h4-style);
   font-family: var(--h4-font);
 }
@@ -426,7 +464,6 @@ h5, .markdown-rendered h5, .HyperMD-header-5, .HyperMD-list-line .cm-header-5 {
   font-size: var(--h5-size);
   line-height: var(--h5-line-height);
   color: var(--h5-color);
-  font-weight:bold;
   font-style: var(--h5-style);
   font-family: var(--h5-font);
 }
@@ -436,7 +473,6 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
   font-size: var(--h6-size);
   line-height: var(--h6-line-height);
   color: var(--h6-color);
-  font-weight: bold;
   font-style: var(--h6-style);
   font-family: var(--h6-font);
 }
@@ -451,13 +487,17 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
   padding-bottom: 0.2em;
   letter-spacing: -0.015em;
   color: var(--inline-title-color);
+  transition: transform .25s;
+}
+.inline-title:hover {
+transform: scale(1.085);
 }
 
 /* BORDERS (***) */
 .markdown-preview-view hr {
   border: none;
-  border-bottom: 2px solid;
-  border-bottom-color: var(--text-faint);
+  border-bottom: 1px solid;
+  border-bottom-color: var(--hr-color);
 }
 .markdown-source-view hr {
   border: none;
@@ -500,6 +540,7 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
     -webkit-transform:scale(0.5); 
     transform:scale(1.08);
     z-index: 100;
+    box-shadow: var(--floating-box-shadow);
     
 }
 /* CALLOUTS */
@@ -508,8 +549,6 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
   overflow: hidden;
   border-style: solid;
   border-color: rgba(var(--callout-color), var(--callout-border-opacity));
-
-
   margin:13px 0px;
 	padding:17px 27px 17px 37px;
 	border-radius:1em;
@@ -519,8 +558,14 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
 	position:relative;
   box-shadow: var(--floating-box-shadow);
   z-index: 1;
+  transition:transform 0.25s ease;
+  margin-right: auto;
+  margin-left: auto;
+  width: 70%;
 }
-
+.callout:hover {
+  transform: scale(1.085);
+}
 
 .callout::before{
   content: '';
@@ -536,7 +581,8 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
 
 /* BLOCKQUOTES */
 .markdown-preview-view blockquote{
-	margin:13px 0px;
+  margin-right: auto;
+  margin-left: auto;
 	padding:17px 50px 17px 37px;
 	border-radius:1em;
 	background-color:var(--background-tertiary);
@@ -545,6 +591,11 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
 	color:var(--color-base-70);
 	position:relative;
   z-index: 1;
+  width: 70%;
+  transition:transform 0.25s ease;
+}
+.markdown-preview-view blockquote:hover{
+  transform: scale(1.085);
 }
 .markdown-preview-view blockquote:before{
   content: '';
@@ -568,32 +619,22 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
 /* DATAVIEW STYLING */
 
 .dataview.inline-field-key {
-  font-weight: bold;
-  color: var(--bold-color);
-  padding-right: 8px;
-}
-.dataview.inline-field-key {
-  padding-left: 8px;
-  padding-right: 8px;
+  color: var(--text-normal);
+  font-weight: var(--font-bold);
   font-family:inherit;
-  font-variant: small-caps;
   background-color:transparent;
-  color: var(--text-nav-selected);
-
 }
+
 .dataview.inline-field-standalone-value {
-  padding-left: 0px !important;
-    padding-right: 0px !important;
+  padding: 0px !important;
   font-family: inherit;
   font-style:italic;
   font-weight: normal;
   background-color: transparent;
-  color: var(--text-normal);
-  
+  color: var(--text-normal); 
 }
 .dataview.inline-field-value {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding: 0px;
   font-family: inherit;
   background-color: transparent;
   color: var(--text-nav-selected);
@@ -623,11 +664,15 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
   border-spacing: 0 !important;
   border-collapse: separate !important;
   border-radius: 10px !important;
-  border: 0px solid transparent;
+  border: none;
   overflow: hidden !important;
   width:100% !important;
+  transition: transform 0.1s;
  }
- 
+ table:hover {
+  transform: scale(1.05);
+  box-shadow: var(--floating-box-shadow);
+ }
  /* DATAVIEW TABLES */
  tbody > tr{
   text-align: center;
@@ -642,23 +687,33 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
   font-size: inherit;
 }
  
-
+/* REMOVE BORDER LINES */
+.workspace-tab-header-container {
+  border-color: transparent;
+}
 
 /* SIDEBAR ICONS */
 .nav-folder.mod-root > .nav-folder-title ::before{
   content: "⟡ "
 }
 
-/* THEMES */
-.theme-light,
-.is-mobile.theme-light,
-.is-tablet.theme-light{
-  --background-primary: hsl(calc(0 + var(--accent-h)), 100%, 99.5%);
-  --background-secondary: hsl(calc(0 + var(--accent-h)), 30%, 95%);
+/* THEME COLORS */
+.theme-default.theme-light, .theme-light{
   --background-tertiary: hsl(1,100%,100%);
   --text-muted: hsl(var(--accent-h), 20%, 50%);
   --text-faint: hsl(var(--accent-h), 20%, 63%, 65%);
-  --color-base-100: hsl(calc(0 + var(--accent-h)), 20%, 35%);
+ --color-base-00: hsl(calc(0 + var(--accent-h)), 100%, 99.5%);
+    --color-base-05: hsl(calc(0 + var(--accent-h)), 40%, 96.5%);
+    --color-base-10: hsl(calc(0 + var(--accent-h)), 30%, 95.9%);
+    --color-base-20: hsl(calc(0 + var(--accent-h)), 40%, 94.5%);
+    --color-base-25: hsl(calc(0 + var(--accent-h)), 80%, 42%);
+    --color-base-30: hsl(calc(0 + var(--accent-h)), calc(var(--accent-s) - 55%), 89%);
+    --color-base-35: hsl(calc(0 + var(--accent-h)), 70%, 88%);
+    --color-base-40: hsl(calc(0 + var(--accent-h)), calc(var(--accent-s) - 15%), 86%);
+    --color-base-50: hsl(calc(0 + var(--accent-h)), 18%, 63%);
+    --color-base-60: hsl(calc(0 + var(--accent-h)), 55%, 72%);
+    --color-base-70: hsl(calc(0 + var(--accent-h)), 5%, 55%);
+    --color-base-100: hsl(calc(0 + var(--accent-h)), 5%, 30%);
   --h1-color: hsl(var(--accent-h), 10%, 25%);
   --h2-color: var(--h1-color);
   --h3-color: var(--h1-color);
@@ -684,19 +739,58 @@ h6, .markdown-rendered h6, .HyperMD-header-6, .HyperMD-list-line .cm-header-6 {
   --color-pink: #D53984;
 }
 
-.theme-dark,
-.is-mobile.theme-dark,
-.is-tablet.theme-dark{
-  --background-primary: hsl(calc(0 + var(--accent-h)), 11%, 25.5%);
-  --background-secondary: hsl(calc(0 + var(--accent-h)), 10%, 20%);
+.theme-dark, .dark-theme-default.theme-dark {
   --background-tertiary: hsl(calc(0 + var(--accent-h)), 100%, 80%, 0.08);
-  --text-muted: hsl(var(--accent-h), 50%, 73%);
-  --text-faint: hsl(var(--accent-h), 20%, 55%);
   --color-base-100: hsl(calc(0 + var(--accent-h)), 20%, 80%);
+  --color-base-00:hsl(calc(0 + var(--accent-h)), 11%, 25.5%);
+  --color-base-10: hsl(calc(0 + var(--accent-h)), 11.5%, 18.5%);
+  --color-base-20: hsl(calc(0 + var(--accent-h)), 10%, 20%);
+  --color-base-25: hsl(calc(0 + var(--accent-h)), 11.5%, 10%);
+  --color-base-30: hsl(calc(0 + var(--accent-h)), 12%, 33%);
+
+  --color-base-60: hsl(calc(0 + var(--accent-h)), 20%, 13%);
+  --color-base-70: hsl(calc(0 + var(--accent-h)), 50%, 73%);
 
 }
 
+.theme-alternate.theme-light{
+  --background-tertiary: hsl(1,100%,100%);
+  --text-muted: hsl(var(--accent-h), 20%, 50%);
+  --text-faint: hsl(var(--accent-h), 20%, 63%, 65%);
+ --color-base-00: hsl(calc(0 + var(--accent-h)), 100%, 99.5%);
+    --color-base-05: hsl(calc(0 + var(--accent-h)), 40%, 96.5%);
+    --color-base-10: hsl(calc(0 + var(--accent-h)), 30%, 95.9%);
+    --color-base-20: hsl(calc(0 + var(--accent-h)), calc(var(--accent-s) - 5%), calc(95% - calc(var(--accent-l)/100)));
+    --color-base-25: hsl(calc(0 + var(--accent-h)), 80%, 42%);
+    --color-base-30: hsl(calc(0 + var(--accent-h)), calc(var(--accent-s) - 55%), 89%);
+    --color-base-35: hsl(calc(0 + var(--accent-h)), 70%, 88%);
+    --color-base-40: hsl(calc(0 + var(--accent-h)), calc(var(--accent-s) - 15%), 86%);
+    --color-base-50: hsl(calc(0 + var(--accent-h)), 18%, 63%);
+    --color-base-60: hsl(calc(0 + var(--accent-h)), 55%, 72%);
+    --color-base-70: hsl(calc(0 + var(--accent-h)), 5%, 55%);
+    --color-base-100: hsl(calc(0 + var(--accent-h)), 5%, 30%);
+  --h1-color: hsl(var(--accent-h), 10%, 25%);
+  --h2-color: var(--h1-color);
+  --h3-color: var(--h1-color);
+  --h4-color: var(--h1-color);
+  --h5-color: var(--h1-color);
+  --h6-color: var(--h1-color);
 
+}
+ .dark-theme-alternate.theme-dark {
+  --background-tertiary: hsl(calc(0 + var(--accent-h)), 100%, 80%, 0.08);
+  --color-base-00:hsl(calc(0 + var(--accent-h)), 7%, 11.5%);
+  --color-base-10: hsl(calc(0 + var(--accent-h)), 11.5%, 18.5%);
+  --color-base-20: hsl(calc(0 + var(--accent-h)), 7%, 9%);
+  --color-base-25: hsl(calc(0 + var(--accent-h)), 11.5%, 10%);
+  --color-base-30: hsl(calc(0 + var(--accent-h)), 12%, 23%);
+  --color-base-35: hsl(calc(0 + var(--accent-h)), 14%, 11%);
+  --color-base-40: hsl(calc(0 + var(--accent-h)), 16%, 12%);
+  --color-base-50: hsl(calc(0 + var(--accent-h)), 18%, 35%);
+  --color-base-60: hsl(calc(0 + var(--accent-h)), 20%, 13%);
+  --color-base-70: hsl(calc(0 + var(--accent-h)), 15%, 50%);
+  --color-base-100: hsl(calc(0 + var(--accent-h)), 15%, 75%);
+}
 
 /*------------ Below is a chunk of code from MADO MINIFLOW by hydescarf.--------- */
 
@@ -713,6 +807,7 @@ body, body.is-translucent{
 .workspace-split.mod-root .view-content{ /* remove background as parent will be the one to have it instead */
 	background-color:(var(--background-secondary));
   padding-bottom: 10px;
+  
 }
 
 /* Make spacing to match collapsed left-ribbon-dock */
@@ -747,7 +842,6 @@ body:is(:not(.css-settings-manager),.toggle-sidebar-fixed-right) .mod-right-spli
 	max-width:var(--sidebar-size-right);
 }
 
-
 body:is(:not(.css-settings-manager),.toggle-sidebar-right-top) .workspace-split.mod-horizontal.mod-right-split .workspace-tabs.mod-top.mod-top-right-space .workspace-tab-container,
 body.toggle-sidebar-left-top .workspace-split.mod-horizontal.mod-left-split .workspace-tabs.mod-top.mod-top-left-space .workspace-tab-container{
 	margin-top:37px;
@@ -773,7 +867,7 @@ body.toggle-tab-height .workspace-split.mod-vertical.mod-root .workspace-tab-hea
 	margin:0 0 5px 0;
 }
 
-/* Remove top-margin and increase gap in between tabs */
+/* Remove top-margin and increase gap in between */
 .workspace-split.mod-vertical.mod-root .workspace-tab-header-container-inner{
 	margin:0 -5px;
 	gap:0;
@@ -818,6 +912,12 @@ body.is-translucent .workspace-split.mod-vertical.mod-root .workspace-tabs:not(.
   height: calc(var(--header-height) - var(--tab-outline-width));
   width: var(--ribbon-width);
 }
+ body {
+  --tab-outline-color: transparent;
+  --tab-text-color-active: var(--color-accent-2);
+  --tab-text-color-focused-active: var(--color-accent-2);
+  --tab-text-color-focused-active-current: var(--color-accent-2);
+ }
 
 /* Hide Scollbars */
 body:not(.is-mobile):is(:not(.css-settings-manager),.toggle-scrollbar) ::-webkit-scrollbar-thumb{
@@ -902,7 +1002,6 @@ body{
 }
 .frontmatter-container .frontmatter-section-label {
   flex-basis: 10em;
-  font-variant:small-caps;
   font-weight: bold;
   flex-shrink: 0;
   font-size: var(--font-smaller);
@@ -916,3 +1015,80 @@ body{
   padding-right: 0;
 }
 
+/* PAGE GALLERY */
+.page-gallery__image {
+  box-shadow: none;
+  opacity: 1;
+  margin-bottom: 8px;
+  border-radius: 10px 10px 0px 0px;
+}
+.page-gallery__image:hover {
+  box-shadow: var(--floating-box-shadow);
+  opacity: 1;
+}
+.page-gallery__field {
+  text-shadow: none;
+  word-wrap: break-word;
+  white-space: initial;
+  padding: 0px 5px 10px 5px; 
+}
+.page-gallery__fallback, .page-gallery__fallback:hover {
+  box-shadow: none;
+  margin-bottom: 8px;
+  border-radius: 10px 10px 0px 0px;
+}
+.page-gallery__tile:hover {
+  transform: scale(1.07);
+}
+.page-gallery__tile {
+  transition: transform 0.25s;
+  box-shadow: vaR(--floating-box-shadow);
+  border-radius: 10px;
+}
+.page-gallery__group-title {
+  text-shadow: none;
+  border-bottom: 1px solid var(--hr-color);
+  margin-bottom: 1em;
+  font-size: var(--h2-size);
+  font-family: var(--h2-font);
+  font-weight: var(--h2-weight);
+}
+/* DATABASE FOLDER */
+.database-plugin__row-shadow {
+  background-color: var(--background-secondary-alt);
+}
+
+
+/* @settings
+
+name: Light & Bright
+id: light-and-bright-theme
+settings:
+    -
+        id: light-theme-settings
+        title: Light Mode Color Scheme
+        type: class-select
+        allowEmpty: false
+        default: theme-default
+        options:
+            - 
+                label: Balanced
+                value: theme-default
+            -
+                label: Bright
+                value: theme-alternate
+    -
+        id: dark-theme-settings
+        title: Dark Mode Color Scheme
+        type: class-select
+        allowEmpty: false
+        default: dark-theme-default
+        options:
+            - 
+                label: Moderate
+                value: dark-theme-default
+            -
+                label: Dark
+                value: dark-theme-alternate
+
+*/
