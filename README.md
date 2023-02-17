@@ -26,9 +26,10 @@ A clean, weightless theme created to evoke an elegant, modern, cozy feel. This t
  
 # 🔌Compatible Plug-Ins
 - [x] Dataview
-- [ ] Style Settings *(coming soon!)*
+- [x] Style Settings 
 # ✂️ Compatible Snippets
 - [x] Built-In support for Kepano's Minimal **cards** CSS class.
+- [x] hydescarf's *mado panels* code (can be found in the Mado Miniflow theme)
 
 # Credits
 - ⭐ hydescarf's Mado Miniflow theme
